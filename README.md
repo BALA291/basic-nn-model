@@ -47,13 +47,48 @@ Plot the performance plot
 Evaluate the model with the testing data.
 
 ## PROGRAM
-### Name:
-### Register Number:
+### Name: BALAMURUGAN B
+### Register Number: 212222230016
 ```python
 
-Include your code here
-
-
+from google.colab import auth
+import gspread
+from google.auth import default
+auth.authenticate_user()
+creds, _=default()
+gc= gspread.authorize(creds)
+worksheet=gc.open('DLdata1').sheet1
+data= worksheet.get_all_values()
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import MinMaxScaler
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+dataset1=pd.DataFrame(data[1:],columns=data[0])
+dataset1
+dataset1=dataset1.astype({'Input1' : 'float'})
+dataset1=dataset1.astype({'Output1' : 'float'})
+dataset1.head()
+X=dataset1[["Input1"]].values
+Y=dataset1[["Output1"]].values
+X_train,X_test,Y_train,Y_test=(train_test_split(X,Y,test_size=0.33,random_state=20))
+Scaler=MinMaxScaler()
+Scaler.fit(X_train)
+X_train1= Scaler.transform(X_train)
+ai_brain = Sequential([
+    Dense(5,activation = 'relu'),
+    Dense(10,activation = 'relu'),
+    Dense(1)
+])
+ai_brain.compile(optimizer = 'rmsprop', loss = 'mse')
+history=ai_brain.fit(X_train1,Y_train,epochs = 3500)
+ai_brain.summary()
+loss=pd.DataFrame(ai_brain.history.history)
+loss.plot()
+X_test=Scaler.transform(X_test)
+X_a=[[21]]
+X_a_1=Scaler.transform(X_a)
+ai_brain.predict(X_a_1)
 ```
 ## Dataset Information
 
