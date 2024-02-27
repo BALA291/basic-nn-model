@@ -50,7 +50,7 @@ Evaluate the model with the testing data.
 ### Name: BALAMURUGAN B
 ### Register Number: 212222230016
 ```python
-
+#IMPORTING REQUIRED LIBRARIES AND READ DATASET
 from google.colab import auth
 import gspread
 from google.auth import default
@@ -69,12 +69,20 @@ dataset1
 dataset1=dataset1.astype({'Input1' : 'float'})
 dataset1=dataset1.astype({'Output1' : 'float'})
 dataset1.head()
+
+#ALLOCATE 'X' AND 'Y' VALUES
 X=dataset1[["Input1"]].values
 Y=dataset1[["Output1"]].values
+
+#SPLIT THE DATASET INTO TRAINING AND TESTING DATA
 X_train,X_test,Y_train,Y_test=(train_test_split(X,Y,test_size=0.33,random_state=20))
+
+#DATA PREPROCESSING USING MINMAX SCALER
 Scaler=MinMaxScaler()
 Scaler.fit(X_train)
 X_train1= Scaler.transform(X_train)
+
+#CREATING THE MODEL
 ai_brain = Sequential([
     Dense(5,activation = 'relu'),
     Dense(10,activation = 'relu'),
@@ -85,10 +93,16 @@ history=ai_brain.fit(X_train1,Y_train,epochs = 3500)
 ai_brain.summary()
 loss=pd.DataFrame(ai_brain.history.history)
 loss.plot()
+
+#PREDICTED OUTPUT
 X_test=Scaler.transform(X_test)
-X_a=[[21]]
-X_a_1=Scaler.transform(X_a)
-ai_brain.predict(X_a_1)
+X_b=[[30]]
+X_b_1=Scaler.transform(X_b)
+ai_brain.predict(X_b_1)
+
+X_c=[[72]]
+X_c_1=Scaler.transform(X_c)
+ai_brain.predict(X_c_1)
 ```
 ## Dataset Information
 
