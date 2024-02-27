@@ -92,7 +92,7 @@ ai_brain.predict(X_a_1)
 ```
 ## Dataset Information
 
-Include screenshot of the dataset
+![DATASET](https://github.com/BALA291/basic-nn-model/assets/120717501/71702328-e1a8-449f-94ab-35e3fbd37a49)
 
 ## OUTPUT
 
