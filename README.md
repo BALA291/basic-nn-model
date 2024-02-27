@@ -114,7 +114,8 @@ ai_brain.predict(X_c_1)
 ![PLOT](https://github.com/BALA291/basic-nn-model/assets/120717501/67fcebc5-2ac7-4f9c-93d4-c502fa208554)
 
 ### Test Data Root Mean Squared Error
-![loss](https://github.com/BALA291/basic-nn-model/assets/120717501/13608c4b-bc81-4a44-a204-09d1525bf89e)
+![Screenshot 2024-02-27 222934](https://github.com/BALA291/basic-nn-model/assets/120717501/4709e773-1f98-427e-a7c6-73ac60110129)
+
 
 ### New Sample Data Prediction
 ![predicted](https://github.com/BALA291/basic-nn-model/assets/120717501/5f69fab4-c008-4c64-858a-e67ec8629eb9)
