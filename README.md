@@ -97,17 +97,14 @@ ai_brain.predict(X_a_1)
 ## OUTPUT
 
 ### Training Loss Vs Iteration Plot
-
-Include your plot here
+![PLOT](https://github.com/BALA291/basic-nn-model/assets/120717501/67fcebc5-2ac7-4f9c-93d4-c502fa208554)
 
 ### Test Data Root Mean Squared Error
-
-Find the test data root mean squared error
+![loss](https://github.com/BALA291/basic-nn-model/assets/120717501/13608c4b-bc81-4a44-a204-09d1525bf89e)
 
 ### New Sample Data Prediction
-
-Include your sample input and output here
+![predicted](https://github.com/BALA291/basic-nn-model/assets/120717501/5f69fab4-c008-4c64-858a-e67ec8629eb9)
 
 ## RESULT
 
-Include your result here
+Thus a neural network regression model for the given dataset is written and executed successfully.
