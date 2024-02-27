@@ -94,7 +94,7 @@ ai_brain.summary()
 loss=pd.DataFrame(ai_brain.history.history)
 loss.plot()
 
-#PREDICTED OUTPUT
+#TESTING DATA
 X_test=Scaler.transform(X_test)
 X_b=[[30]]
 X_b_1=Scaler.transform(X_b)
