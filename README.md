@@ -6,11 +6,11 @@ To develop a neural network regression model for the given dataset.
 
 ## THEORY
 
-Neural networks consist of simple input/output units called neurons (inspired by neurons of the human brain). These input/output units are interconnected and each connection has a weight associated with it. Neural networks are flexible and can be used for both classification and regression. In this article, we will see how neural networks can be applied to regression problems.
+Neural networks consist of simple input/output units called neurons (inspired by neurons of the human brain). These input/output units are interconnected and each connection has a weight associated with it. Neural networks are flexible and can be used for both classification and regression types of problems. In this exercise, we will see how neural networks can be applied to regression problems.
 
-Regression helps in establishing a relationship between a dependent variable and one or more independent variables. Regression models work well only when the regression equation is a good fit for the data. Most regression models will not fit the data perfectly. Although neural networks are complex and computationally expensive, they are flexible and can dynamically pick the best type of regression, and if that is not enough, hidden layers can be added to improve prediction.
+Regression helps in establishing a relationship between a dependent variable and one or more independent variables. Regression models work well only when the regression equation is a good fit for the data. Most regression models will not fit the data perfectly.In general regression types of problems gives real numbers as a output. Although neural networks are complex and computationally expensive, they are flexible and can dynamically pick the best type of regression, and if that is not enough, hidden layers can be added to improve prediction.
 
-First import the libraries which we will going to use and Import the dataset and check the types of the columns and Now build your training and test set from the dataset Here we are making the neural network 3 hidden layer with activation layer as relu and with their nodes in them. Now we will fit our dataset and then predict the value.
+First import the required libraries like tensorflow and sklearn.Before building the model,using sklearn data preprocessing and cleaning should be done to the dataset.now split the data into training and testing data.create a neural network model with five input neurons and one hidden layer which consist of ten neurons with activation layer relu and with their nodes in them. Now we will fit out dataset and then predict the value.
 
 ## Neural Network Model
 ![neuron model](https://github.com/BALA291/basic-nn-model/assets/120717501/99db3e2c-f02f-4fd9-938f-e7f7e21ff9bb)
